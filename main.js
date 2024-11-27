@@ -9,9 +9,11 @@ const utilisateur2 = new Utilisateur("Bob");
     //! Création de groupes
 const groupePublic = new Groupe("Voyageurs", false);
 const groupePrivé = new Groupe("Investisseurs", true);
+
     //! Ajout des membres aux groupes
 groupePublic.ajouterMembre(utilisateur1);
 groupePrivé.ajouterMembre(utilisateur2);
+
 
 // Scénario réussi : Publication conforme.
 try {
@@ -19,7 +21,7 @@ try {
     if (publication) {
         console.log(`${utilisateur1.nom} a publié : "${publication.contenu}"`);
     }
-    
+
     // Scénario réussi : commentaire conforme. 
     try {
         const commentaireValide = new Commentaire(utilisateur2, "Super publication !");
